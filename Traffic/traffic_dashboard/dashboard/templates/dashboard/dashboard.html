@@ -1,0 +1,62 @@
+{% extends "dashboard/base.html" %}
+
+{% block content %}
+<section class="dashboard-grid">
+    <div class="filter-card">
+        <h2>Filters</h2>
+        <form method="get">
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" value="{{ selected_date }}">
+
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location" value="{{ selected_location }}" placeholder="Downtown">
+
+            <button type="submit">Apply</button>
+        </form>
+    </div>
+
+    <div class="chart-card">
+        <h2>Hourly Traffic</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hour</th>
+                    <th>Total Vehicles</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in hourly %}
+                    <tr>
+                        <td>{{ item._id }}:00</td>
+                        <td>{{ item.total_vehicles }}</td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="2">No data available.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="chart-card">
+        <h2>Traffic by Location</h2>
+        <ul class="summary-list">
+            {% for item in locations %}
+                <li><strong>{{ item._id }}</strong>: {{ item.total_vehicles }}</li>
+            {% empty %}
+                <li>No location data.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="chart-card">
+        <h2>Vehicle Type Distribution</h2>
+        <ul class="summary-list">
+            {% for item in types %}
+                <li><strong>{{ item._id }}</strong>: {{ item.total_vehicles }}</li>
+            {% empty %}
+                <li>No vehicle type data.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

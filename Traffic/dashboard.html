@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Main Dashboard - Traffic UI</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar glass">
+      <div class="sidebar-head">
+        <div class="logo">🚦</div>
+        <div>
+          <h2>Traffic UI</h2>
+          <p>Main Visualization Page</p>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h3>Navigation</h3>
+        <nav>
+          <a class="nav-link" href="index.html">Login Page</a>
+          <a class="nav-link active" href="dashboard.html">Main Dashboard</a>
+          <a class="nav-link" href="details.html">Project Details</a>
+        </nav>
+      </div>
+
+      <div class="side-card">
+        <h3>Filters</h3>
+        <label>Location</label>
+        <select id="locationFilter"></select>
+
+        <label>Weather</label>
+        <select id="weatherFilter"></select>
+
+        <label>Day Name</label>
+        <select id="dayFilter"></select>
+
+        <label>Vehicle Type</label>
+        <select id="vehicleFilter"></select>
+
+        <button id="resetFilters" class="btn btn-green">Reset Filters</button>
+        <button id="logoutBtn" class="btn btn-purple">Logout</button>
+      </div>
+
+      <div class="side-card notes-card">
+        <h3>Quick Notes</h3>
+        <p>All filters update KPI cards and charts.</p>
+        <p>Peak hour changes dynamically based on selected conditions.</p>
+        <p>Use Project Details page for full methodology, prediction, simulation, and pollution content.</p>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <section class="hero glass">
+        <h1>🚦 Smart Traffic Intelligence, Analysis & Prediction System</h1>
+        <p>Interactive charts and working filters for peak hour analysis, traffic trend understanding, and presentation-ready visualization.</p>
+      </section>
+
+      <section class="kpi-grid">
+        <div class="kpi blue">
+          <span>Total Traffic</span>
+          <strong id="totalTraffic">0</strong>
+        </div>
+        <div class="kpi green">
+          <span>Peak Hour</span>
+          <strong id="peakHour">0</strong>
+        </div>
+        <div class="kpi purple">
+          <span>Average Traffic</span>
+          <strong id="avgTraffic">0</strong>
+        </div>
+        <div class="kpi orange">
+          <span>Filtered Records</span>
+          <strong id="recordCount">0</strong>
+        </div>
+      </section>
+
+      <section class="chart-grid two-col">
+        <div class="panel glass">
+          <div class="panel-head"><h2>Hourly Traffic Volume</h2><span>Bar Chart</span></div>
+          <canvas id="hourlyBar"></canvas>
+        </div>
+        <div class="panel glass">
+          <div class="panel-head"><h2>Traffic Trend</h2><span>Line Chart</span></div>
+          <canvas id="trafficLine"></canvas>
+        </div>
+      </section>
+
+      <section class="chart-grid two-col">
+        <div class="panel glass">
+          <div class="panel-head"><h2>Vehicle Type Distribution</h2><span>Pie Chart</span></div>
+          <canvas id="vehiclePie"></canvas>
+        </div>
+        <div class="panel glass">
+          <div class="panel-head"><h2>Weather Distribution</h2><span>Doughnut Chart</span></div>
+          <canvas id="weatherDoughnut"></canvas>
+        </div>
+      </section>
+
+      <section class="chart-grid two-col">
+        <div class="panel glass">
+          <div class="panel-head"><h2>Top Locations</h2><span>Current Filter Summary</span></div>
+          <div id="topLocations" class="summary-list"></div>
+        </div>
+        <div class="panel glass">
+          <div class="panel-head"><h2>Summary</h2><span>Live Dashboard Info</span></div>
+          <div class="summary-box">
+            <p><strong>Login User:</strong> admin</p>
+            <p><strong>Project Theme:</strong> Smart traffic analysis, prediction, and optimization</p>
+            <p><strong>Core Insight:</strong> Use cleaned traffic data to identify congestion peaks and guide decisions.</p>
+            <p><strong>Prediction Tag:</strong> Tomorrow 6 PM may show high congestion.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="guard.js"></script>
+  <script src="data.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

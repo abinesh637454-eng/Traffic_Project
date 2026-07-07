@@ -1,0 +1,7 @@
+Date,Time,Location,Weather,Day_Name,Vehicle_Type,Vehicle_Count,Predicted_Next_Day,Signal_Timing_Impact,CO2_Emission_kg
+2026-04-01,08:00,Junction_X,Clear,Monday,Bike,780,820,Low,12.6
+2026-04-01,09:00,Junction_X,Cloudy,Monday,Car,760,800,Medium,18.2
+2026-04-01,17:00,Junction_X,Cloudy,Wednesday,Bus,3970,4050,High,76.4
+2026-04-01,18:00,Junction_Y,Rain,Thursday,Truck,3350,3490,High,84.7
+2026-04-01,19:00,Junction_X,Clear,Friday,Auto,3341,3405,Medium,48.3
+2026-04-01,20:00,Junction_Z,Fog,Saturday,Bike,1490,1510,Medium,21.4

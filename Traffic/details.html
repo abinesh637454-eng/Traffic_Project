@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details - Traffic Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar glass">
+      <div class="sidebar-head">
+        <div class="logo">🚦</div>
+        <div>
+          <h2>Traffic UI</h2>
+          <p>Project Details Page</p>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h3>Navigation</h3>
+        <nav>
+          <a class="nav-link" href="index.html">Login Page</a>
+          <a class="nav-link" href="dashboard.html">Main Dashboard</a>
+          <a class="nav-link active" href="details.html">Project Details</a>
+        </nav>
+      </div>
+
+      <div class="side-card">
+        <h3>Project Stack</h3>
+        <p>Python, Pandas, NumPy</p>
+        <p>Matplotlib, Seaborn, Power BI</p>
+        <p>HTML, CSS, JavaScript</p>
+        <p>MongoDB</p>
+      </div>
+
+      <div class="side-card notes-card">
+        <h3>Presentation Tip</h3>
+        <p>Use this page to explain the aim, workflow, outputs, and future enhancement clearly in review or viva.</p>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <section class="hero glass">
+        <h1>🚦 Smart Traffic Intelligence, Analysis & Prediction System</h1>
+        <p>A complete content page based on your provided project write-up.</p>
+      </section>
+
+      <div class="details-grid">
+        <section class="panel glass full">
+          <h2>🧠 Overview</h2>
+          <p>The Smart Traffic Intelligence, Analysis & Prediction System is a comprehensive data-driven application designed to clean, analyze, predict, and optimize urban traffic conditions.</p>
+          <p>The project begins with traffic data cleaning and peak hour analysis using Python and Power BI, and is further enhanced with advanced features like next-day traffic prediction, what-if scenario simulation, and pollution estimation.</p>
+          <p>It integrates data science, machine learning concepts, and a web-based dashboard, providing a complete solution for intelligent traffic management and urban planning.</p>
+        </section>
+
+        <section class="panel glass">
+          <h2>🎯 Objectives</h2>
+          <ul>
+            <li>Preprocess and clean raw traffic data</li>
+            <li>Identify peak traffic hours using data analysis</li>
+            <li>Predict tomorrow’s traffic patterns</li>
+            <li>Simulate traffic scenarios for better decision-making</li>
+            <li>Estimate environmental impact (CO₂ emissions)</li>
+            <li>Provide interactive and visual insights</li>
+          </ul>
+        </section>
+
+        <section class="panel glass">
+          <h2>🛠️ Tools & Technologies</h2>
+          <ul>
+            <li><strong>Data Processing & Analysis:</strong> Python, Pandas, NumPy</li>
+            <li><strong>Visualization:</strong> Matplotlib, Seaborn, Power BI</li>
+            <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Database:</strong> MongoDB</li>
+          </ul>
+        </section>
+
+        <section class="panel glass full">
+          <h2>⚙️ System Workflow</h2>
+          <div class="workflow-item"><strong>1️⃣ Data Cleaning</strong><p>Removed duplicate records, filled missing values using median for numerical data and mode for categorical data, dropped invalid date and time rows, and converted date and time into proper format.</p></div>
+          <div class="workflow-item"><strong>2️⃣ Feature Engineering</strong><p>Extracted hour from timestamp and prepared a structured dataset for analysis and prediction.</p></div>
+          <div class="workflow-item"><strong>3️⃣ Traffic Analysis (Core Foundation)</strong><p>Grouped data by hour, calculated total vehicle count, and identified peak traffic hour. Example: <strong>6 PM → Highest traffic observed</strong>.</p></div>
+          <div class="workflow-item"><strong>4️⃣ 🔮 Tomorrow’s Traffic Prediction (Advanced)</strong><p>Built a prediction model using historical data and regression-based techniques to forecast hourly traffic for the next day. Example: <strong>Tomorrow 6 PM → Expected high congestion</strong>.</p></div>
+          <div class="workflow-item"><strong>5️⃣ 🧪 What-if Scenario Simulation (Advanced)</strong><p>Simulates traffic under conditions like increased signal timing, road closures, and peak hour shifts to help planning and decision-making.</p></div>
+          <div class="workflow-item"><strong>6️⃣ 🌱 Pollution Estimation (Advanced)</strong><p>Estimates fuel consumption and CO₂ emissions to identify high pollution periods.</p></div>
+          <div class="workflow-item"><strong>7️⃣ 📊 Visualization</strong><p>Python offers quick traffic-vs-hour charts, Power BI provides interactive charts, slicers, and KPI cards, and the web dashboard shows prediction results, simulation outputs, and traffic trends.</p></div>
+        </section>
+
+        <section class="panel glass">
+          <h2>📊 Results</h2>
+          <ul>
+            <li>Cleaned dataset without missing or invalid values</li>
+            <li>Identified peak traffic hours such as 6 PM</li>
+            <li>Generated next-day traffic predictions</li>
+            <li>Simulated traffic optimization scenarios</li>
+            <li>Estimated pollution impact</li>
+            <li>Delivered interactive visual insights</li>
+          </ul>
+        </section>
+
+        <section class="panel glass">
+          <h2>🎯 Conclusion</h2>
+          <p>This project evolves from a basic analysis system into a complete traffic intelligence platform by integrating data cleaning and peak analysis, traffic prediction, what-if simulation, and pollution estimation.</p>
+          <p>It provides a holistic solution for traffic management, congestion reduction, and smart city planning.</p>
+        </section>
+
+        <section class="panel glass full">
+          <h2>🚀 Future Enhancements</h2>
+          <div class="tag-row">
+            <span class="chip">Real-time traffic data integration</span>
+            <span class="chip">Deep learning models (LSTM)</span>
+            <span class="chip">Map-based visualization</span>
+            <span class="chip">AI-based traffic signal automation</span>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="guard.js"></script>
+</body>
+</html>
